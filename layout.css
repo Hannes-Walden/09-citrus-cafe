@@ -1,0 +1,88 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1rem;
+    font-size: 1.6rem;
+    background-color: #83C05B;
+}
+
+/* bodyn lapset flexataan */
+.container {}
+.container > * {}
+
+header, nav, #vision, #boxes section, p, a {
+    margin-block-end: 1rem;
+}
+
+#logo {}
+
+.piilota {
+    display: none;
+}
+
+/* navigointipalkki */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+nav ul > * {
+    flex-grow: 1;
+    flex-basis: 100%;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.20);
+    border: #83C05B;
+    padding: 1rem;
+    border-radius: 0.7rem;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+/* kuvat responsiiviseksi */
+figure img {
+    max-width: 100%;
+}
+
+/* vision teksti ja kuva */
+#vision {}
+#vision > * {}
+#vision section {
+    font-size: 2rem;
+    padding: 0.5rem 1.5rem;
+}
+#vision figure {
+    display: none;
+}
+
+/* #boxes ja sectionit */
+#boxes {}
+#boxes > * {}
+
+/* #boxes section h2 muotoilu */
+#boxes section h2 {
+    padding: 1rem;
+    background-color: lightgray;
+
+}
+#boxes section h2 span {
+    float: right;
+}
+
+/* #news .kapea ja .levea */
+#news {}
+#news > * {}
+#news .kapea {}
+#news .levea {}
+
+/* footer .some-nav */
+footer .some-nav {}
+
+/* footer osoitetiedot */
+.contact {}
+.contact p {}
+.contact a {}
