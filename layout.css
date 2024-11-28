@@ -62,8 +62,14 @@ figure img {
 }
 
 /* #boxes ja sectionit */
-#boxes {}
+#boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 #boxes > * {
+    flex-grow: 1;
+    flex-basis: 100%;
     border: white solid 1rem;
     margin: 0 -1rem;}
 
@@ -78,25 +84,29 @@ figure img {
     float: right;
 }
 
-/* #news .kapea ja .levea */
 #news {
+    background-color: white;
+}
+
+/* #news .kapea ja .levea */
+.parent {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: white;
 }
-#news > * {
+.parent > * {
     flex-grow: 1;
     flex-basis: 0;
 }
-#news h2 {
+.parent h2 {
     flex-basis: 100%;
 }
-#news .kapea {
+.parent .kapea {
     flex-basis: 5rem;
     padding: 1rem;
 }
-#news .levea {
+.parent .levea {
     flex-basis: auto;
     flex-grow: 6;
     padding: 1rem;
@@ -131,11 +141,46 @@ footer .some-nav {
     body {
       background-color: lightblue;
     }
-  }
+    nav ul > * {
+        flex-basis: 0;
+    }
+
+    /* vision teksti ja kuva */
+#vision {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 1rem solid white;
+}
+#vision > * {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+#vision section {
+    flex-grow: 2;
+    background-image: url("./images/vision-bg.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#vision figure {
+    display: block;
+}
+#boxes #specials,
+#boxes #events {
+    flex-basis: 0;
+}
+}
 
   /* Desktopin säännöt */
 @media only screen and (min-width: 769px) {
     body {
       background-color: yellow;
+    }
+    #boxes #news {
+        flex-basis: 0;
+    }
+    #boxes #events {
+        border-inline-end: 0;
     }
   }
